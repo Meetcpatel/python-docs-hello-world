@@ -11,8 +11,7 @@ app.config["DEBUG"] = True
 
 @app.route('/', methods=['GET'])
 def home():
-    return '''<h1>This is Index Page</h1>
-    <p>This is Index Page</p>'''
+    return '''<h1>This is Index Page</h1>'''
 
 
 @app.route('/insta', methods=['GET'])
