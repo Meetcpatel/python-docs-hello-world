@@ -14,7 +14,7 @@ def home():
     return '''<h1>This is Index Page</h1>'''
 
 
-@app.route('/insta', methods=['GET'])
+@app.route('/application', methods=['GET'])
 def api_id():
     # Check if an ID was provided as part of the URL.
     # If ID is provided, assign it to a variable.
