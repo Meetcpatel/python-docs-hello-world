@@ -23,7 +23,7 @@ def api_id():
         id = request.args['id']
     else:
         return "Error: No id field provided. Please specify an id."
-
+    id= 'https://www.instagram.com/p/CAknIJGld6J';
     #start_url = id#In this example, the link is https://www.instagram.com/p/BdLhfC-HWIi/?taken-by=arianagrande
     response = requests.get(id)
     html = response.text
