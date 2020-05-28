@@ -16,6 +16,7 @@ def home():
 
 @app.route('/application', methods=['POST'])
 def api_id():
+      data = request.json
     # Check if an ID was provided as part of the URL.
     # If ID is provided, assign it to a variable.
     # If no ID is provided, display an error in the browser.
@@ -38,7 +39,7 @@ def api_id():
    # return dict
     # Use the jsonify function from Flask to convert our list of
     # Python dictionaries to the JSON format.
-    return dict
+    return data
 
 #port = int(os.environ.get("PORT", 5000))
    
