@@ -26,14 +26,15 @@ def api_id():
      #   return "Error: No id field provided. Please specify an id."
    # id= 'https://www.instagram.com/p/CAknIJGld6J';
     #start_url = id#In this example, the link is https://www.instagram.com/p/BdLhfC-HWIi/?taken-by=arianagrande
-    attempted_username = request.form['id']
-    response = requests.get(attempted_username)
+    id = request.form['id']
+    #id = "https://www.instagram.com/p/CAknIJGld6J"
+    response = requests.get(id)
     html = response.text
    
 
-    soup = BeautifulSoup(attempted_username, 'lxml')
+    soup = BeautifulSoup(html, 'lxml')
     photo_url = soup.find("meta", property="og:image")['content']
-    #print(photo_url)
+    print(photo_url)
 
     dict = {
             'URL': photo_url,   
