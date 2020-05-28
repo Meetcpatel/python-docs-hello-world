@@ -19,10 +19,10 @@ def api_id():
     # Check if an ID was provided as part of the URL.
     # If ID is provided, assign it to a variable.
     # If no ID is provided, display an error in the browser.
-    if 'id' in request.args:
-        id = request.args['id']
-    else:
-        return "Error: No id field provided. Please specify an id."
+    #if 'id' in request.args:
+     #   id = request.args['id']
+    #else:
+     #   return "Error: No id field provided. Please specify an id."
    # id= 'https://www.instagram.com/p/CAknIJGld6J';
     #start_url = id#In this example, the link is https://www.instagram.com/p/BdLhfC-HWIi/?taken-by=arianagrande
     response = requests.get(id)
