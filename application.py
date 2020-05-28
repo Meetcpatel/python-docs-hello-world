@@ -28,18 +28,18 @@ def api_id():
     #start_url = id#In this example, the link is https://www.instagram.com/p/BdLhfC-HWIi/?taken-by=arianagrande
     id = request.form['id']
     #id = "https://www.instagram.com/p/CAknIJGld6J"
-    #response = requests.get(id)
-    #html = response.text
+    response = requests.get(id)
+    html = response.text
    
 
-    #soup = BeautifulSoup(html, 'lxml')
-    #photo_url = soup.find("meta", property="og:image")['content']
+    soup = BeautifulSoup(html, 'lxml')
+    photo_url = soup.find("meta", property="og:image")['content']
     #print(photo_url)
 
-   # dict = {
-            #'URL': photo_url,   
-           # }
-    return id
+    dict = {
+            'URL': photo_url,   
+            }
+    return dict
     # Use the jsonify function from Flask to convert our list of
     # Python dictionaries to the JSON format.
     #return attempted_username
