@@ -27,7 +27,7 @@ def api_id():
    # id= 'https://www.instagram.com/p/CAknIJGld6J';
     #start_url = id#In this example, the link is https://www.instagram.com/p/BdLhfC-HWIi/?taken-by=arianagrande
     #id = request.form['id']
-    #id = "https://www.instagram.com/p/CAknIJGld6J"
+    id = "https://www.instagram.com/p/CAknIJGld6J"
     response = requests.get(id)
     html = response.text
    
