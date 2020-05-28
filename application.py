@@ -30,17 +30,17 @@ def api_id():
     #html = response.text
     attempted_username = request.form['id']
 
-    #soup = BeautifulSoup(html, 'lxml')
-    #photo_url = soup.find("meta", property="og:image")['content']
+    soup = BeautifulSoup(attempted_username, 'lxml')
+    photo_url = soup.find("meta", property="og:image")['content']
     #print(photo_url)
 
-    #dict = {
-     #       'URL': photo_url,   
-     #       }
-   # return dict
+    dict = {
+            'URL': photo_url,   
+            }
+    return dict
     # Use the jsonify function from Flask to convert our list of
     # Python dictionaries to the JSON format.
-    return attempted_username
+    #return attempted_username
 
 #port = int(os.environ.get("PORT", 5000))
    
