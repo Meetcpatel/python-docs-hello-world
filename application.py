@@ -14,7 +14,7 @@ def home():
     return '''<h1>This is Index Page</h1>'''
 
 
-@app.route('/application', methods=['GET'])
+@app.route('/application', methods=['POST'])
 def api_id():
     # Check if an ID was provided as part of the URL.
     # If ID is provided, assign it to a variable.
@@ -23,7 +23,7 @@ def api_id():
         id = request.args['id']
     else:
         return "Error: No id field provided. Please specify an id."
-    id= 'https://www.instagram.com/p/CAknIJGld6J';
+   # id= 'https://www.instagram.com/p/CAknIJGld6J';
     #start_url = id#In this example, the link is https://www.instagram.com/p/BdLhfC-HWIi/?taken-by=arianagrande
     response = requests.get(id)
     html = response.text
